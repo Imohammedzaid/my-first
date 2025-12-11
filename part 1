@@ -1,0 +1,89 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Imohammedzaid/my-first/blob/main/part%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "import time\n",
+        "\n",
+        "# Define workout categories\n",
+        "warmup = [\"Jumping Jacks\", \"High Knees\", \"Arm Circles\", \"Butt Kicks\"]\n",
+        "strength = [\"Push-ups\", \"Squats\", \"Lunges\", \"Plank\", \"Burpees\"]\n",
+        "cardio = [\"Mountain Climbers\", \"Skipping Rope\", \"Sprint in Place\", \"Jump Squats\"]\n",
+        "cooldown = [\"Stretch Hamstrings\", \"Child's Pose\", \"Cat-Cow Stretch\", \"Shoulder Stretch\"]\n",
+        "\n",
+        "# Function to pick random exercises\n",
+        "def pick_exercises(category, n=2):\n",
+        "    return random.sample(category, n)\n",
+        "\n",
+        "# Generate a workout plan\n",
+        "print(\"Your Workout Plan\\n\")\n",
+        "\n",
+        "print(\"Warm-up:\", pick_exercises(warmup))\n",
+        "print(\"Strength:\", pick_exercises(strength))\n",
+        "print(\"Cardio:\", pick_exercises(cardio))\n",
+        "print(\"Cooldown:\", pick_exercises(cooldown))\n",
+        "\n",
+        "# Optional: Timer for each exercise\n",
+        "def exercise_timer(seconds=30):\n",
+        "    for i in range(seconds, 0, -1):\n",
+        "        print(f\"{i} seconds left...\", end=\"\\r\")\n",
+        "        time.sleep(1)\n",
+        "    print(\"Done!\\n\")\n",
+        "\n",
+        "# Example: Run a 30-second timer for Push-ups\n",
+        "print(\"\\nStart: Push-ups\")\n",
+        "exercise_timer(30)"
+      ],
+      "metadata": {
+        "id": "Dca41CQrNHlT",
+        "outputId": "91b9ff83-8045-42f1-a676-2ee437ee14b4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Your Workout Plan\n",
+            "\n",
+            "Warm-up: ['High Knees', 'Butt Kicks']\n",
+            "Strength: ['Plank', 'Push-ups']\n",
+            "Cardio: ['Skipping Rope', 'Jump Squats']\n",
+            "Cooldown: ['Shoulder Stretch', 'Cat-Cow Stretch']\n",
+            "\n",
+            "Start: Push-ups\n",
+            "Done!\n",
+            "\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Welcome To Colab",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
